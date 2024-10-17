@@ -2,10 +2,12 @@
 
 #define MODE 1
 
+#if MODE == 1
 static void add(int one, int two)
 {
     std::cout << "Результат сложения: " << one + two << std::endl;
 }
+#endif
 
 int main()
 {
@@ -29,6 +31,8 @@ int main()
     add(one, two);
 #else
     std::cout << "Неизвестный режим. Завершение работы" << std::endl;
+    return EXIT_FAILURE;
 #endif
+    return EXIT_SUCCESS;
 }
 
